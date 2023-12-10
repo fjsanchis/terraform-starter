@@ -60,3 +60,36 @@ variable "openstack_region" {
   sensitive   = false
   description = "openstack"
 }
+
+
+# Configuration 
+variable "resource_naming_prefix" {
+  type        = string
+  sensitive   = false
+  description = "name prefix for all resources"
+  default     = "web-app"
+}
+variable "environment" {
+  type        = string
+  sensitive   = false
+  description = "environment for all resources"
+  default     = "dev"
+}
+variable "instance_type" {
+  type        = string
+  sensitive   = false
+  description = "instance type"
+  default     = "d2-4"
+}
+variable "region" {
+  type        = string
+  sensitive   = false
+  description = "public cloud region"
+  default     = "GRA11"
+}
+variable "kube_version" {
+  type        = string
+  sensitive   = false
+  description = "kubernetes version"
+  default     = "1.28"
+}
